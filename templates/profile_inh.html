@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}User Profile: {{ name }}{% endblock %}
+
+{% block content %}
+<h1>User Profile: {{ name }}</h1>
+<div class="profile-info">
+    <p>Welcome to the profile page for <strong>{{ name }}</strong>.</p>
+    <p>This content is dynamic and uses our shared layout!</p>
+</div>
+{% endblock %}

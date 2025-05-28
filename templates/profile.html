@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- url_for function here is used to link css file called style.css to the profile page-->
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/user/JohnDoe">User Profile</a>
+    </div>
+    <h1>User Profile: {{ name }}</h1>
+    <p>Welcome to the profile page for {{ name }}.</p>
+    <p>This content is dynamic!</p>
+</body>
+
+</html>

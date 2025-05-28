@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+{%block css%} <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">{%endblock}
+{% block content %}
+<h1>Contact Us</h1>
+<p>Please fill out the form below to send us a message.</p>
+
+<form method="POST" action="/contact">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="user_name" required><br><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="user_email" required><br><br>
+
+    <label for="message">Your Message:</label><br>
+    <textarea id="message" name="user_message" rows="5" required></textarea><br><br>
+
+    <input type="submit" value="Send Message">
+</form>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class="flashes">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+
+{% endblock %}

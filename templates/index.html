@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/user/JohnDoe">User Profile</a>
+        <a href="/post/1">post</a>
+        
+    </div>
+    
+    <h1>
+
+        {% if current_time.hour >= 12 %}
+        Hello, {{greetings[1]}}"
+        {% else %}
+        Hello, {{greetings[0]}}
+        {% endif %}
+    </h1>
+    <p>This is the home page rendered using an HTML template.</p>
+</body>
+
+</html>

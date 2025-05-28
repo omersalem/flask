@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Flask App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   
+   <!-- block for css we write {%block css%}{%endblock}--> 
+   {%block css%} {%endblock}
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/user/JohnDoe">User Profile</a>
+        <a href="/post/123">Sample Post</a>
+        <a href="/contact">Contact</a>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="footer">
+        
+        <img src="{{ url_for('static', filename='image/logo.jpg') }}" alt="Logo" style="height:50px;">
+        <p>&copy; 2025 My Flask App. All rights reserved.</p>
+    </footer>
+</body>
+<footer class="footer">
+    
+</footer>
+</html>
