@@ -15,7 +15,7 @@ def home():
     # render_template looks for the file in the 'templates' folder
     greetings =['good morning','good evening']
     
-    return render_template('index_inh.html', greetings=greetings, current_time = dt.now().hour)
+    return render_template('index_inh.html', greetings=greetings)
 
 # Define the about route, rendering about.html
 @app.route('/about')
